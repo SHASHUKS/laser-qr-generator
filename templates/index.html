@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser QR Generator</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Laser QR Generator</h1>
+
+        <input type="text" id="item_id" placeholder="Item ID">
+
+        <input type="text" id="item_type" placeholder="Item Type">
+
+        <input type="text" id="supplier" placeholder="Supplier">
+
+        <input type="date" id="manufacture_date">
+
+        <input type="date" id="expiry_date">
+
+        <textarea id="notes" placeholder="Notes"></textarea>
+
+        <button onclick="generateQR()">
+            Generate QR
+        </button>
+
+        <div id="qr-result"></div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
